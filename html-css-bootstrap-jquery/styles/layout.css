@@ -401,4 +401,24 @@ img {
     padding: 3rem 0 !important;
   }
 }
+
+#text-overlap-image #second-column {
+  z-index: 99;
+  background-color: white;
+  -webkit-box-shadow: 0 0 10px 0 grey;
+          box-shadow: 0 0 10px 0 grey;
+  margin-left: -100px;
+}
+
+@media screen and (max-width: 992px) {
+  #text-overlap-image.p-5 {
+    padding: 3rem 1rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #text-overlap-image #second-column {
+    margin: 0px;
+  }
+}
 /*# sourceMappingURL=layout.css.map */
