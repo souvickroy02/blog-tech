@@ -421,4 +421,9 @@ img {
     margin: 0px;
   }
 }
+
+#testimonials-carousel {
+  background: url(../gallery/testimonial.jpg) center no-repeat;
+  background-size: cover;
+}
 /*# sourceMappingURL=layout.css.map */
