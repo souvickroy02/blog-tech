@@ -396,42 +396,119 @@ img {
   background-size: cover;
 }
 
-#text-over-image section footer a{
+#text-over-image section footer a {
   background-color: rgb(235, 38, 38);
 }
 
-#text-over-image section footer a:hover{
+#text-over-image section footer a:hover {
   background-color: transparent;
 }
 
-@media screen and (max-height: 992px){
-  #text-over-image>.p-5{
+@media screen and (max-height: 992px) {
+  #text-over-image > .p-5 {
     padding: 3rem 0 !important;
   }
 }
 
 // Text Overlapping Image
-#text-overlap-image #second-column{
+#text-overlap-image #second-column {
   z-index: 99;
   background-color: white;
   box-shadow: 0 0 10px 0 grey;
   margin-left: -100px;
 }
 
-@media screen and (max-width: 992px){
-  #text-overlap-image.p-5{
+@media screen and (max-width: 992px) {
+  #text-overlap-image.p-5 {
     padding: 3rem 1rem !important;
   }
 }
 
-@media screen and (max-width: 768px){
-  #text-overlap-image #second-column{
+@media screen and (max-width: 768px) {
+  #text-overlap-image #second-column {
     margin: 0px;
   }
 }
 
 // Testimonials Carousel
-#testimonials-carousel{
+#testimonials-carousel {
   background: url(../gallery/testimonial.jpg) center no-repeat;
   background-size: cover;
 }
+
+// News and Updates
+.blog article figure {
+  display: block;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.blog article .textwrap .meta li {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 0.8rem;
+}
+
+.blog article .textwrap .meta li:last-child {
+  margin-right: 0px;
+}
+
+// Image Hover Effect
+.img-hover {
+  display: block;
+  position: relative;
+  max-width: 100%;
+}
+
+.img-hover::before,
+.img-hover::after {
+  display: block;
+  position: absolute;
+  content: "";
+  text-align: center;
+  opacity: 0;
+}
+
+.img-hover::before {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.img-hover::after {
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin: -25px 0 0 -25px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900; // FontAwesome for solid style needs this property to work
+  content: "\f121";
+  font-size: 36px;
+}
+
+.img-hover:hover::before {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+
+.img-hover:hover::after {
+  color: #fff;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1200px) {
+  #news-blog.p-5 {
+    padding: 3rem 1rem !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #news-blog > .p-5 {
+    padding: 1rem !important;
+  }
+}
+
+// Footer
